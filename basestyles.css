@@ -67,8 +67,8 @@ h1{
   padding: 50px;
   background-color: #2a7f98;
   margin-top: 100px;
-  margin-right: 6%;
-  margin-left: 6%;
+  margin-right: 8%;
+  margin-left: 8%;
   font-family: 'OrkneyMedium', sans-serif;
   color: white;
   float: left;
@@ -86,8 +86,8 @@ h1{
   padding: 50px;
   background-color: #2a7f98;
   margin-top: 100px;
-  margin-right: 6%;
-  margin-left: 6%;
+  margin-right: 8%;
+  margin-left: 8%;
   font-family: 'OrkneyMedium', sans-serif;
   color: white;
   float: left;
@@ -141,9 +141,47 @@ background-position: -40px -10px;
 
 
 
+/*@media only screen and (max-width: 2250px){
+
+  #links a {
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    padding: 50px;
+    background-color: #2a7f98;
+    margin-top: 100px;
+    margin-right: 9%;
+    margin-left: 9%;
+    font-family: 'OrkneyMedium', sans-serif;
+    color: white;
+    float: left;
+  }
 
 
 
+
+  #links2 a {
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    padding: 50px;
+    background-color: #2a7f98;
+    margin-top: 100px;
+    margin-right: 9%;
+    margin-left: 9%;
+    font-family: 'OrkneyMedium', sans-serif;
+    color: white;
+    float: left;
+  }
+
+
+
+
+}
+
+
+
+*/
 
 
 
