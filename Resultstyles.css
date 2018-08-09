@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'Orkney';
+  src: url(OrkneyBold.ttf);
+
+}
+
+@font-face {
+  font-family: 'OrkneyMedium';
+  src: url(OrkneyMedium.ttf);
+
+}
+
+
+body{
+  background-color: lightgrey;
+  /* background-image: url("Images/homepage.jpg"); */
+  /* background-size: 100%; */
+  margin: 0;
+}
+
+
+
+
+/* #nav a {
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: 'OrkneyMedium', sans-serif;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 2px;
+} */
+
+#nav {
+
+  float: right;
+  padding-top: 150px;
+}
+
+#Text{
+  margin-top: 30vh;
+  margin-left: 30vw;
+  color: white;
+
+      }
+
+h1{
+  opacity: 0.85;
+  font-size: 4rem;
+  font-family: 'Orkney';
+}
+
+h2{
+  padding-left: 10px;
+font-family: 'Orkney';
+font-size: 2rem;
+float: left;
+
+}
+
+p{
+  font-family: 'OrkneyMedium';
+  margin-top: 0px;
+  max-width: 400px;
+  padding-left: 10px;
+}
+
+img{
+  position: absolute;
+  right: 0%;
+  top: 25%;
+  max-width: 45vw;
+}
+
+.number1{
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 12px;
+  color: white;
+  opacity: 0.8;
+}
+
+
+.year{
+  position: relative;
+  color: white;
+  font-family: 'OrkneyMedium', sans-serif;
+  letter-spacing: 4px;
+  top: 163px;
+  left: 60px;
+  opacity: 0.8;
+}
+
+
+
+.main{
+  background-image: url("Images/results.jpg");
+  background-size: 2500px;
+  height: 1200px;
+}
+
+
+
+
+
+
+
+ul li {
+  display: inline;
+  text-align: center;
+}
+
+#nav a {
+   /* display: inline-block; */
+  float: left;
+  /* width: 0px; */
+  margin-left: 150px;
+  margin-right: 150px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-family: 'OrkneyMedium', sans-serif;
+  color: white;
+
+
+}
+
+
+#nav a:hover{
+  opacity: 0.6;
+
+}
+
+
+.two:hover ~ hr {
+  margin-left: 40%;
+}
+
+.three:hover ~ hr {
+  margin-left: 76%;
+}
+
+/* .four:hover ~ hr {
+  margin-left: 75%;
+} */
+
+hr {
+  height: .25rem;
+  width: 100px;
+  margin: 0;
+  background: black;
+  opacity: 0.85;
+  margin-left: 100px;
+  border: none;
+  transition: .3s ease-in-out;
+  z-index: -100;
+}
+
+
+
+
+@media only screen and (max-width: 1700px){
+
+  img{
+    position: absolute;
+    right: -5%;
+    
+    max-width: 50vw;
+  }
+
+  #Text{
+    margin-top: 30vh;
+    margin-left: 25vw;
+    color: white;
+
+        }
+
+
+}

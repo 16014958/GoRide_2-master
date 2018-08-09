@@ -1,0 +1,385 @@
+
+@font-face {
+  font-family: 'Orkney';
+  src: url(OrkneyBold.ttf);
+
+}
+
+@font-face {
+  font-family: 'OrkneyMedium';
+  src: url(OrkneyMedium.ttf);
+
+}
+
+*{
+  /* border: 0.5px red solid; */
+
+}
+
+
+body{
+  margin: 0px;
+  background-color: grey;
+  background-image: url('Images/typeofride.jpg');
+  background-size: 100%;
+}
+
+#ride-type{
+  margin-top: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+h1{
+ font-family: 'OrkneyMedium', sans-serif;
+ color: black;
+ opacity: 0.8;
+}
+
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: black;
+
+}
+
+#links{
+  margin-top: 200px;
+
+}
+
+
+#links2{
+  margin-top: 300px;
+
+
+}
+
+
+#links a {
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  padding: 60px;
+  background-color: #2a7f98;
+  margin-top: 100px;
+  margin-right: 6%;
+  margin-left: 6%;
+  font-family: 'OrkneyMedium', sans-serif;
+  color: white;
+  float: left;
+}
+
+
+#links2 a {
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  padding: 60px;
+  background-color: #2a7f98;
+  margin-top: 100px;
+  margin-right: 6%;
+  margin-left: 6%;
+  font-family: 'OrkneyMedium', sans-serif;
+  color: white;
+  float: left;
+}
+
+
+#button{
+
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 200px; */
+  width: 400px;
+
+  border-radius: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: #2a7f98;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'OrkneyMedium', sans-serif;
+  color: white;
+}
+
+
+.Button{
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+ position: relative;
+ top: 200px;
+}
+
+
+.a{
+background-image: url('Images/.jpg');
+background-size: 140%;
+background-position: -40px -10px;
+}
+
+.b{
+background-image: url('Images/.jpg');
+background-size: 140%;
+background-position: -40px -10px;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1880px){
+
+
+body{
+  background-size: 2000px;
+}
+
+
+#links a {
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+
+#links2 a {
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 1600px){
+
+  #links a {
+    margin-left: 4%;
+    margin-right: 4%;
+
+  }
+
+
+  #links2 a {
+    margin-left: 4%;
+    margin-right: 4%;
+
+  }
+
+
+.Button{
+  position: relative;
+  top: 200px;
+}
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 1375px){
+
+
+body{
+  /* background-size: 160%; */
+  background-position: -100px 0px;
+}
+
+
+#links a {
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+
+#links2 a {
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1180px){
+
+
+  body{
+    /* background-size: 170%; */
+    background-position: -330px 0px;
+  }
+
+  #ride-type{
+    margin-top: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+
+
+.line{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+@media only screen and (max-width: 1060px){
+
+
+  #links a {
+
+    padding: 40px;
+
+  }
+
+
+  #links2 a {
+    padding: 40px;
+
+
+  }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 910px){
+
+#links  {
+  margin-top: 20px;
+
+}
+
+
+#links2  {
+  margin-top: 0px;
+
+}
+
+#ride-type{
+  margin-top: 100px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 650px){
+
+body{
+  background-position: -1000px 0px;
+}
+
+h1{
+  font-size: 1.5rem;
+}
+
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 510px){
+
+
+  #links a {
+
+    padding: 30px;
+
+    margin-right: 5%;
+    margin-left: 5%;
+
+  }
+
+
+  #links2 a {
+
+    padding: 30px;
+
+    margin-right: 5%;
+    margin-left: 5%;
+
+  }
+
+
+
+}
+
+
+@media only screen and (max-width: 420px){
+
+#links{
+  margin-top: 5px;
+}
+
+#links a{
+  font-size: 0.8rem;
+
+}
+
+#links2 a{
+  font-size: 0.8rem;
+}
+
+h1{
+  font-size: 1rem;
+}
+
+
+.Button{
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+ position: relative;
+ top: 150px;
+}
+
+
+}
