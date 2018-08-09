@@ -74,6 +74,10 @@ h1{
 }
 
 
+#links a:hover{
+  opacity: 0.8;
+}
+
 #links2 a {
   border-radius: 25px;
   text-align: center;
@@ -88,6 +92,9 @@ h1{
   float: left;
 }
 
+#links2 a:hover{
+  opacity: 0.8;
+}
 
 #button{
 

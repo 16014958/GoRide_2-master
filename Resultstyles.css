@@ -97,9 +97,14 @@ img{
 
 .main{
   background-image: url("Images/results.jpg");
-  background-size: 2500px;
+  background-repeat: no-repeat;
+  background-size: 100%;
   height: 1200px;
+  background-color: red;
 }
+
+
+
 
 
 
@@ -147,15 +152,189 @@ ul li {
 
 hr {
   height: .25rem;
+
   width: 100px;
   margin: 0;
+  margin-right: 0px;
+  margin-top: 100px;
   background: black;
   opacity: 0.85;
   margin-left: 100px;
   border: none;
   transition: .3s ease-in-out;
-  z-index: -100;
+
 }
+
+
+
+
+.mobile-menu {
+
+  width: auto;
+  position: relative;
+  padding: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  /* disable text selection by clicking */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mobile-menu a.dropdown-link{
+  display: block;
+  height: 50px;
+  padding: 0 20px;
+  color: black;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background: yellowgreen;
+  font-family: 'Oswald', sans-serif;
+}
+
+.mobile-menu a.dropdown-link:hover{
+    text-decoration: none;
+}
+.mobile-menu a.dropdown-link i{
+    float: right;
+    position: relative;
+    top: 15px;
+}
+
+.mobile-dropdown {
+  font-family: 'OrkneyMedium', sans-serif;
+  display: none;
+  list-style-type: none;
+  background: black;
+  opacity: 0.7;
+  padding: 0;
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 125px;
+
+  z-index: 1000;
+  /* margin: 0; */
+}
+
+.mobile-dropdown li{
+  padding: 0;
+  height: auto;
+}
+
+.mobile-dropdown li a{
+  padding: 0;
+  color: #FFFFFF;
+  display: block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+
+  text-decoration: none;
+}
+
+.mobile-dropdown li a:hover{
+  text-decoration: none;
+  /* color: dodgerblue; */
+  opacity: 0.7;
+}
+
+
+
+
+.menu-toggle{
+  flex:0 0 auto;
+  width:40px;
+  height:40px;
+  border:1px solid rgb(15,15,15);
+  cursor:pointer;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+}
+.hamburger,.cross{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.hamburger span{
+  display:block;
+  width:18px;
+  height:2px;
+  margin-bottom:3px;
+  overflow:hidden;
+  position:relative;
+}
+.hamburger span:last-child{
+  margin:0;
+}
+.hamburger span:before,.hamburger span:after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: black;
+  transform:translateX(-200%);
+  transition:transform ease 300ms;
+}
+.hamburger span:after{
+  transform:translateX(0);
+}
+.hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{
+  transition-delay:75ms;
+}
+.hamburger span:last-child:before,.hamburger span:last-child:after{
+  transition-delay:150ms;
+}
+.menu-toggle:hover .hamburger span:before{
+  transform:translateX(0);
+}
+.menu-toggle:hover .hamburger span:after{
+  transform:translateX(200%);
+}
+.menu-toggle.active .hamburger span:before{
+  transform:translateX(100%);
+}
+.menu-toggle.active .hamburger span:after{
+  transform:translateX(200%);
+}
+.cross span{
+  display:block;
+  width:18px;
+  height:2px;
+  background-color: black;
+  transform:translateY(50%) rotate(45deg) scaleX(0);
+  transition:transform ease 200ms;
+}
+.cross span:last-child{
+  transform:translateY(-50%) rotate(-45deg) scaleX(0);
+}
+.menu-toggle.active .cross span{
+  transition-delay:450ms;
+  transform:translateY(50%) rotate(45deg) scaleX(1);
+}
+.menu-toggle.active .cross span:last-child{
+  transform:translateY(-50%) rotate(-45deg) scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,7 +344,7 @@ hr {
   img{
     position: absolute;
     right: -5%;
-    
+
     max-width: 50vw;
   }
 
@@ -175,6 +354,323 @@ hr {
     color: white;
 
         }
+
+
+        .main{
+
+          background-size: 140%;
+          height: 1100px;
+        }
+
+        .number1{
+          position: absolute;
+          left: 50%;
+          top: 900px;
+
+        }
+
+
+}
+
+
+
+@media only screen and (max-width: 1400px){
+
+  img{
+    position: absolute;
+    right: -2%;
+
+    max-width: 40vw;
+  }
+
+
+  #Text{
+    margin-top: 30vh;
+    margin-left: 20vw;
+    color: white;
+    font-size: 0.9rem;
+        }
+
+
+}
+
+
+@media only screen and (max-width: 1200px){
+.main{
+  background-size: 160%;
+}
+
+}
+
+@media only screen and (max-width: 1166px){
+
+
+img{
+  max-width: 700px;
+  position: absolute;
+  right: -4%;
+  top: 200px;;
+}
+
+
+#Text{
+    margin-top: 280px;
+    margin-left: 40px;
+    color: white;
+    font-size: 0.9rem;
+        }
+
+
+
+
+
+#nav {
+          margin-top: -50px;
+}
+
+
+#nav a{
+
+            margin-left: 50px;
+            margin-right: 50px;
+
+          }
+
+
+.year{
+  opacity: 0;
+}
+
+
+.number1{
+  position: absolute;
+  left: 50%;
+  top: 700px;
+  font-size: 4rem;
+
+}
+
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 1130px){
+
+
+ h1{
+   font-size: 3rem;
+
+ }
+
+h2{
+  font-size: 1.5rem;
+
+}
+
+p{
+  font-size: 0.7rem;
+  max-width: 300px;
+}
+
+
+img {
+  max-width: 600px;
+}
+
+
+.main{
+  background-size: 180%;
+  background-position: -500px 0px;
+}
+
+}
+
+@media only screen and (max-width: 930px){
+
+  img{
+
+    position: absolute;
+    right: -14%;
+    top: 200px;;
+  }
+
+  .main{
+    background-size: 1700px;
+
+  }
+
+}
+
+
+@media only screen and (max-width: 840px){
+
+
+
+  img{
+max-width: 100%;
+
+position: absolute;
+right: 0;
+top: 250px;
+  }
+
+  #Text{
+    margin-top: 880px;
+    margin-left: 40px;
+    color: white;
+    font-size: 0.9rem;
+        }
+
+        
+
+
+
+}
+
+
+
+@media only screen and (max-width: 700px){
+
+
+  #Text{
+    margin-top: 780px;
+
+        }
+
+
+}
+
+
+
+@media only screen and (max-width: 620px){
+
+
+  #Text{
+    margin-top: 680px;
+
+        }
+
+        .number1{
+          position: absolute;
+          left: 80%;
+          top: 700px;
+          font-size: 2rem;
+
+        }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 620px){
+
+
+
+
+}
+
+
+
+@media only screen and (max-width: 570px){
+
+img {
+  max-width: 120%;
+}
+
+
+#nav{display: none;}
+.number1{
+  position: absolute;
+  left: 80%;
+  top: 400px;
+  font-size: 2rem;
+
+}
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 500px){
+
+  #Text{
+    margin-top: 580px;
+}
+
+img {
+  max-width: 140%;
+  position: absolute;
+  right: 0;
+  top: 150px;
+}
+
+}
+
+
+
+@media only screen and (max-width: 450px){
+
+
+  #Text{
+    margin-top: 500px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 400px){
+
+  #Text{
+    margin-top: 450px;
+    margin-left: 10px;
+
+
+        }
+
+      h1{
+        font-size: 1.5rem;
+
+      }
+
+      h2{
+        font-size: 1rem;
+      }
+
+      p{
+        max-width: 90%;
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 570px){
+.mobile-menu {
+display: none;
+
+}
 
 
 }
