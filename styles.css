@@ -550,6 +550,15 @@ body{
     max-width: 80%;
 
   }
+
+
+  #Text{
+    margin-top: 20px;
+    margin-left: 30px;
+    color: white;
+
+        }
+
 }
 
 
