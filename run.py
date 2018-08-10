@@ -10,8 +10,31 @@ app.secret_key = '9970436dddec6e16b82c62475435623fdbe7fa03'
 # export FLASK_APP=run.py; export FLASK_DEBUG=1
 # flask run
 
-MENUDB = 'menu.db'
+MENUDB = 'demo.db'
 
+@app.route('/')
+def index():
+  trails = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT * FROM trails')
+  for row in cur:
+    trails.append(list(row))
+
+  return render_template('landing.html', trails=trails)
+
+
+@app.route('/region/wellington')
+def bikepark():
+  trails = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT trail FROM trails WHERE trail="Wellington"')
+  for row in cur:
+    trails.append(list(row))
+
+  return render_template('landing.html')
+
+
+'''
 def fetchMenu(con):
   burgers = []
   free = '0'
@@ -100,3 +123,4 @@ def logout():
   if 'username' in session:
     session.pop('username', None)
   return redirect(url_for('index'))
+'''

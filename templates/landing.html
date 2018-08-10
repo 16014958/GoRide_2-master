@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Landing Page {% endblock %}
+{% block description %} blah blah {% endblock %}
+{% block stylesheet %}static/landingstyles.css{% endblock %}
+
+{% block content %}
+<div id="ride-type">
+
+  <h1> What type of ride are you feeling ? </h1>
+  <div class="line"></div>
+
+  <div id="links">
+    {% for trail in trails %}
+    <a style="background-image:url( static/Images/Alpine.jpg )" href=""> {{ trail[1] }} </a>
+    {% endfor %}
+  </div>
+
+  <div id="links2">
+    <a class="e" href=""> Bike Park </a>
+    <a class="f" href=""> Sea Side </a>
+    <a class="g" href=""> Technical </a>
+    <a class="h" href=""> Long Rides </a>
+  </div>
+
+  <div class="Button">
+    <a id="button" href=""> lets go ride </a>
+  </div>
+
+
+  <br />
+
+
+</div>
+{% endblock %}
