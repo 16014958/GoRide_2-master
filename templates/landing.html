@@ -2,7 +2,7 @@
 
 {% block title %} Landing Page {% endblock %}
 {% block description %} blah blah {% endblock %}
-{% block stylesheet %}static/landingstyles.css{% endblock %}
+{% block stylesheet %}{{ url_for('static', filename='landingstyles.css') }}{% endblock %}
 
 {% block content %}
 <div id="ride-type">
@@ -12,12 +12,12 @@
 
   <div id="links">
     {% for trail in trails %}
-    <a style="background-image:url( static/Images/Alpine.jpg )" href=""> {{ trail[1] }} </a>
+    <a style="background-image:url( static/Images/Alpine.jpg )" href="/region/wellington"> {{ trail[1] }} </a>
     {% endfor %}
   </div>
 
   <div id="links2">
-    <a class="e" href=""> Bike Park </a>
+    <a class="e" href="style/{{ test | lower | replace(" ","") }}"> {{test}} </a>
     <a class="f" href=""> Sea Side </a>
     <a class="g" href=""> Technical </a>
     <a class="h" href=""> Long Rides </a>

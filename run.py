@@ -24,15 +24,19 @@ def index():
 
 
 @app.route('/region/wellington')
-def bikepark():
+def wellington():
   trails = []
   con = sqlite3.connect(MENUDB)
   cur = con.execute('SELECT trail FROM trails WHERE trail="Wellington"')
   for row in cur:
     trails.append(list(row))
 
-  return render_template('landing.html')
+  return render_template('landing.html', test="Bike Park")
 
+
+@app.route('/style/bikepark')
+def bikepark():
+  return "bike park!"
 
 '''
 def fetchMenu(con):
