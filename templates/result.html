@@ -82,7 +82,11 @@ GoRide results.
 
 <div id="Text">
 
-  <h1>  </h1>
+  {% for trail in ride %}
+  <h1> {{ trail[1] }} </h1>
+  {% endfor %}
+
+  
   <p>
     Find some of New Zealand's best trails, not by name but by what you want to ride. Whether its jumps, alpine or seaside. GoRide
     can find the perfect trail for you.

@@ -47,7 +47,7 @@ def singletrack():
 
 
 @app.route('/jump/results')
-def singletrack():
+def jumps():
   ride = []
   con = sqlite3.connect(MENUDB)
   cur = con.execute('SELECT trail FROM rides WHERE location="Canterbury"')
