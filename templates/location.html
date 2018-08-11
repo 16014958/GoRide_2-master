@@ -7,15 +7,15 @@
 {% block content %}
 <div id="ride-type">
 
-  <h1> What type of ride are you feeling ? </h1>
+  <h1> Where do you wana to ride ? </h1>
   <div class="line"></div>
 
   <div id="links">
-    {% for trail in trails %}
-    <a style="background-image:url( static/Images/Alpine.jpg )" href="/location"> {{ trail[3] }} </a>
-    <a style="background-image:url( static/Images/Alpine.jpg )" href="/singletrack"> {{ trail[1] }} </a>
+    {% for trail in ride %}
+    <a style="background-image:url( static/Images/Alpine.jpg )" href="/jump/results"> {{ trail[0] }} </a>
     {% endfor %}
   </div>
+
 
 
 

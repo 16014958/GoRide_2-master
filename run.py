@@ -16,22 +16,46 @@ MENUDB = 'demo.db'
 def index():
   trails = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT * FROM trails')
+  cur = con.execute('SELECT * FROM rides')
   for row in cur:
     trails.append(list(row))
 
   return render_template('landing.html', trails=trails)
 
 
-@app.route('/region/wellington')
-def wellington():
-  trails = []
+@app.route('/location')
+def location():
+  ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT trail FROM trails WHERE trail="Wellington"')
+  cur = con.execute('SELECT location FROM rides WHERE style="jumps"')
   for row in cur:
-    trails.append(list(row))
+    ride.append(list(row))
 
-  return render_template('landing.html', test="Bike Park")
+  return render_template('location.html', ride=ride)
+
+
+@app.route('/singletrack')
+def singletrack():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT location FROM rides WHERE style="singletrack"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+
+
+@app.route('/jump/results')
+def singletrack():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT trail FROM rides WHERE location="Canterbury"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
 
 
 @app.route('/style/bikepark')
