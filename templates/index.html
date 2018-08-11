@@ -1,27 +1,22 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html>
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=static/styles.css />
+{% block title %} Go ride {% endblock %}
+{% block description %} blah blah {% endblock %}
+{% block stylesheet %}{{ url_for('static', filename='styles.css') }}{% endblock %}
 
 
 
 
 
-</head>
 
 
-<title>
-
-GoRide.
-</title>
+{% block content %}
 
 
-<body>
+
+
+
+
 
 
   <div id="nav">
@@ -31,7 +26,7 @@ GoRide.
 
 
     <ul>
-        <li class="one"><a href="landing.html">Trails</a></li><!--
+        <li class="one"><a href="/landing">Trails</a></li><!--
      --><li class="two"><a href="#">About</a></li><!--
      --><li class="three"><a href="#">Contact</a></li>
       <!-- <li class="four"><a href="#">Quatro</a></li>  -->
@@ -63,7 +58,7 @@ GoRide.
 
 
   <ul class="mobile-dropdown">
-  <li> <span><a href="landing.html">Trails</a></span></li>
+  <li> <span><a href='/landing'>Trails</a></span></li>
   <li> <span><a href="#mw">About</a></span></li>
   <li><span><a href="#ct">Contact</a></span></li>
 
@@ -113,15 +108,4 @@ $(document).ready(function(){
 
 
 
-</body>
-
-
-
-
-
-
-
-
-
-
-</html>
+{% endblock %}

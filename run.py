@@ -14,6 +14,11 @@ MENUDB = 'demo.db'
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/landing')
+def landing():
   trails = []
   con = sqlite3.connect(MENUDB)
   cur = con.execute('SELECT * FROM rides')
@@ -46,15 +51,15 @@ def singletrack():
 
 
 
-@app.route('/jump/results')
+@app.route('/jump/result')
 def jumps():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT trail FROM rides WHERE location="Canterbury"')
+  cur = con.execute('SELECT * FROM rides')
   for row in cur:
     ride.append(list(row))
 
-  return render_template('location.html', ride=ride)
+  return render_template('result.html', ride=ride)
 
 
 
