@@ -21,7 +21,7 @@ def index():
 def landing():
   trails = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT * FROM rides')
+  cur = con.execute('SELECT style FROM rides ')
   for row in cur:
     trails.append(list(row))
 
