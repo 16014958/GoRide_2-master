@@ -55,7 +55,7 @@ def singletrack():
 def jumps():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT * FROM rides')
+  cur = con.execute('SELECT * FROM rides WHERE style="jumps" AND location="Otago"')
   for row in cur:
     ride.append(list(row))
 
