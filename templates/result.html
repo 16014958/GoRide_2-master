@@ -83,15 +83,19 @@
 {% for trail in ride %}
   <h2> Difficulty: {{ trail[4] }}</h2>
   {% endfor %}
+
+
+  {% for trail in ride %}
+  <img class="img1" src='{{ trail[5] }}'>
+
+
+
+
+  </div>
+
 </div>
 
-{% for trail in ride %}
-<img class="img1" src='{{ trail[5] }}'>
 
-
-
-
-</div>
 
 {% endfor %}
 <p class="number1"> 01.</p>
