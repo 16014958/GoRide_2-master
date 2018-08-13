@@ -12,9 +12,10 @@
 
   <div id="links">
     {% for trail in trails %}
-    
-    <a style="background-image:url( static/Images/Alpine.jpg )" href="/location"> {{ trail[0] }} </a>
-    <!-- <a style="background-image:url( static/Images/Alpine.jpg )" href="/singletrack"> Single tracks </a> -->
+
+    <a class="{{ trail[0] | upper | replace('A','zzzz')  }} " href="/location"> {{ trail[0] }} </a>
+
+
 
     {% endfor %}
   </div>

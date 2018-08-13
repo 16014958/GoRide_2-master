@@ -48,7 +48,7 @@ h1{
 }
 
 #links{
-  margin-top: 100px;
+  margin-top: 00px;
 
 }
 
@@ -139,6 +139,9 @@ background-position: -40px -10px;
 }
 
 
+.jumps{
+  background-color: red;
+}
 
 
 /*@media only screen and (max-width: 2250px){

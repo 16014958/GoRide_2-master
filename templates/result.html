@@ -18,7 +18,7 @@
     <ul>
         <li class="one"><a href="/landing">Trails</a></li><!--
      --><li class="two"><a href="/">Home</a></li><!--
-     --><li class="three"><a href="Contact.html">Contact</a></li>
+     --><li class="three"><a href="/contact">Contact</a></li>
       <!-- <li class="four"><a href="#">Quatro</a></li>  -->
 
 
@@ -47,9 +47,9 @@
 
 
   <ul class="mobile-dropdown">
-  <li> <span><a href="#ab">Trails</a></span></li>
-  <li> <span><a href="#mw">About</a></span></li>
-  <li><span><a href="#ct">Contact</a></span></li>
+  <li> <span><a href="/landing">Trails</a></span></li>
+  <li> <span><a href="/">Home</a></span></li>
+  <li><span><a href="/contact">Contact</a></span></li>
 
   </ul>
   </div>
@@ -75,13 +75,25 @@
     {{ trail[7] }}
   </p>
 {% endfor %}
-  <h2> Distance: </h2>
-  <h2> Difficulty: </h2>
+
+{% for trail in ride %}
+  <h2> Distance: {{ trail[6] }}</h2>
+  {% endfor %}
+
+{% for trail in ride %}
+  <h2> Difficulty: {{ trail[4] }}</h2>
+  {% endfor %}
+</div>
+
+{% for trail in ride %}
+<img class="img1" src='{{ trail[5] }}'>
+
+
+
 
 </div>
 
-
-<img class="img1" src="Images/Heaphy.jpg">
+{% endfor %}
 <p class="number1"> 01.</p>
 
 

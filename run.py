@@ -21,7 +21,7 @@ def index():
 def landing():
   trails = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT style FROM rides ')
+  cur = con.execute('SELECT DISTINCT style FROM rides')
   for row in cur:
     trails.append(list(row))
 
@@ -63,9 +63,22 @@ def jumps():
 
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @app.route('/style/bikepark')
 def bikepark():
   return "bike park!"
+
+
 
 '''
 def fetchMenu(con):
