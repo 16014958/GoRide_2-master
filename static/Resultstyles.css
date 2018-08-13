@@ -1,56 +1,57 @@
 @font-face {
-  font-family: 'Orkney';
-  src: url(OrkneyBold.ttf);
+font-family: 'Orkney';
+src: url(OrkneyBold.ttf);
 
 }
 
 @font-face {
-  font-family: 'OrkneyMedium';
-  src: url(OrkneyMedium.ttf);
+font-family: 'OrkneyMedium';
+src: url(OrkneyMedium.ttf);
 
 }
 
 
 body{
-  background-color: lightgrey;
-  /* background-image: url("Images/homepage.jpg"); */
-  /* background-size: 100%; */
-  margin: 0;
+background-color: lightgrey;
+/* background-image: url("Images/homepage.jpg"); */
+/* background-size: 100%; */
+margin: 0;
 }
 
 
 
 
 /* #nav a {
-  margin-left: 150px;
-  margin-right: 150px;
-  font-family: 'OrkneyMedium', sans-serif;
-  color: black;
-  text-decoration: none;
-  letter-spacing: 2px;
+margin-left: 150px;
+margin-right: 150px;
+font-family: 'OrkneyMedium', sans-serif;
+color: black;
+text-decoration: none;
+letter-spacing: 2px;
 } */
 
 #nav {
 
-  float: right;
-  padding-top: 150px;
+float: right;
+padding-top: 150px;
 }
 
 #Text{
-  margin-top: 30vh;
-  margin-left: 10vw;
-  color: white;
-      }
+margin-top: 30vh;
+margin-left: 10vw;
+color: white;
+    }
 
 h1{
-  opacity: 0.85;
-  font-size: 4rem;
-  font-family: 'Orkney';
-  max-width: 300px;
+opacity: 0.85;
+font-size: 4rem;
+font-family: 'Orkney';
+max-width: 300px;
+
 }
 
 h2{
-  padding-left: 10px;
+padding-left: 10px;
 font-family: 'Orkney';
 font-size: 2rem;
 float: left;
@@ -58,49 +59,49 @@ float: left;
 }
 
 p{
-  font-family: 'OrkneyMedium';
-  margin-top: 0px;
-  max-width: 400px;
-  padding-left: 10px;
+font-family: 'OrkneyMedium';
+margin-top: 0px;
+max-width: 400px;
+padding-left: 10px;
 }
 
 img{
-  position: absolute;
-  right: 0%;
-  top: 200px;
-  max-width: 45vw;
+position: absolute;
+right: 0%;
+top: 300px;
+max-width: 45vw;
 }
 
 .number1{
-  position: absolute;
-  left: 50%;
-  top: 1100px;
-  font-size: 5rem;
-  font-weight: bold;
-  letter-spacing: 12px;
-  color: white;
-  opacity: 0.8;
+position: absolute;
+left: 50%;
+top: 1100px;
+font-size: 5rem;
+font-weight: bold;
+letter-spacing: 12px;
+color: white;
+opacity: 0.8;
 }
 
 
 .year{
-  position: relative;
-  color: white;
-  font-family: 'OrkneyMedium', sans-serif;
-  letter-spacing: 4px;
-  top: 163px;
-  left: 60px;
-  opacity: 0.8;
+position: relative;
+color: white;
+font-family: 'OrkneyMedium', sans-serif;
+letter-spacing: 4px;
+top: 163px;
+left: 60px;
+opacity: 0.8;
 }
 
 
 
 .main{
-  background-image: url("Images/results.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 1200px;
-  background-color: red;
+background-image: url("Images/results.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+height: 1200px;
+background-color: red;
 }
 
 
@@ -113,55 +114,55 @@ img{
 
 
 ul li {
-  display: inline;
-  text-align: center;
+display: inline;
+text-align: center;
 }
 
 #nav a {
-   /* display: inline-block; */
-  float: left;
-  /* width: 0px; */
-  margin-left: 150px;
-  margin-right: 150px;
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-family: 'OrkneyMedium', sans-serif;
-  color: white;
+ /* display: inline-block; */
+float: left;
+/* width: 0px; */
+margin-left: 150px;
+margin-right: 150px;
+letter-spacing: 3px;
+text-decoration: none;
+font-family: 'OrkneyMedium', sans-serif;
+color: white;
 
 
 }
 
 
 #nav a:hover{
-  opacity: 0.6;
+opacity: 0.6;
 
 }
 
 
 .two:hover ~ hr {
-  margin-left: 40%;
+margin-left: 40%;
 }
 
 .three:hover ~ hr {
-  margin-left: 76%;
+margin-left: 76%;
 }
 
 /* .four:hover ~ hr {
-  margin-left: 75%;
+margin-left: 75%;
 } */
 
 hr {
-  height: .25rem;
+height: .25rem;
 
-  width: 100px;
-  margin: 0;
-  margin-right: 0px;
-  margin-top: 100px;
-  background: black;
-  opacity: 0.85;
-  margin-left: 100px;
-  border: none;
-  transition: .3s ease-in-out;
+width: 100px;
+margin: 0;
+margin-right: 0px;
+margin-top: 100px;
+background: black;
+opacity: 0.85;
+margin-left: 100px;
+border: none;
+transition: .3s ease-in-out;
 
 }
 
@@ -170,156 +171,156 @@ hr {
 
 .mobile-menu {
 
-  width: auto;
-  position: relative;
-  padding: 0;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  /* disable text selection by clicking */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+width: auto;
+position: relative;
+padding: 0;
+height: 50px;
+line-height: 50px;
+text-align: center;
+/* disable text selection by clicking */
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 .mobile-menu a.dropdown-link{
-  display: block;
-  height: 50px;
-  padding: 0 20px;
-  color: black;
-  font-size: 1.3rem;
-  cursor: pointer;
-  background: yellowgreen;
-  font-family: 'Oswald', sans-serif;
+display: block;
+height: 50px;
+padding: 0 20px;
+color: black;
+font-size: 1.3rem;
+cursor: pointer;
+background: yellowgreen;
+font-family: 'Oswald', sans-serif;
 }
 
 .mobile-menu a.dropdown-link:hover{
-    text-decoration: none;
+  text-decoration: none;
 }
 .mobile-menu a.dropdown-link i{
-    float: right;
-    position: relative;
-    top: 15px;
+  float: right;
+  position: relative;
+  top: 15px;
 }
 
 .mobile-dropdown {
-  font-family: 'OrkneyMedium', sans-serif;
-  display: none;
-  list-style-type: none;
-  background: black;
-  opacity: 0.7;
-  padding: 0;
-  max-width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 125px;
+font-family: 'OrkneyMedium', sans-serif;
+display: none;
+list-style-type: none;
+background: black;
+opacity: 0.7;
+padding: 0;
+max-width: 100px;
+margin-left: auto;
+margin-right: auto;
+min-width: 125px;
 
-  z-index: 1000;
-  /* margin: 0; */
+z-index: 1000;
+/* margin: 0; */
 }
 
 .mobile-dropdown li{
-  padding: 0;
-  height: auto;
+padding: 0;
+height: auto;
 }
 
 .mobile-dropdown li a{
-  padding: 0;
-  color: #FFFFFF;
-  display: block;
-  padding: 0 20px;
-  height: 40px;
-  line-height: 40px;
+padding: 0;
+color: #FFFFFF;
+display: block;
+padding: 0 20px;
+height: 40px;
+line-height: 40px;
 
-  text-decoration: none;
+text-decoration: none;
 }
 
 .mobile-dropdown li a:hover{
-  text-decoration: none;
-  /* color: dodgerblue; */
-  opacity: 0.7;
+text-decoration: none;
+/* color: dodgerblue; */
+opacity: 0.7;
 }
 
 
 
 
 .menu-toggle{
-  flex:0 0 auto;
-  width:40px;
-  height:40px;
-  border:1px solid rgb(15,15,15);
-  cursor:pointer;
-  position:relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+flex:0 0 auto;
+width:40px;
+height:40px;
+border:1px solid rgb(15,15,15);
+cursor:pointer;
+position:relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
 
 }
 .hamburger,.cross{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
 }
 .hamburger span{
-  display:block;
-  width:18px;
-  height:2px;
-  margin-bottom:3px;
-  overflow:hidden;
-  position:relative;
+display:block;
+width:18px;
+height:2px;
+margin-bottom:3px;
+overflow:hidden;
+position:relative;
 }
 .hamburger span:last-child{
-  margin:0;
+margin:0;
 }
 .hamburger span:before,.hamburger span:after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background-color: black;
-  transform:translateX(-200%);
-  transition:transform ease 300ms;
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background-color: black;
+transform:translateX(-200%);
+transition:transform ease 300ms;
 }
 .hamburger span:after{
-  transform:translateX(0);
+transform:translateX(0);
 }
 .hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{
-  transition-delay:75ms;
+transition-delay:75ms;
 }
 .hamburger span:last-child:before,.hamburger span:last-child:after{
-  transition-delay:150ms;
+transition-delay:150ms;
 }
 .menu-toggle:hover .hamburger span:before{
-  transform:translateX(0);
+transform:translateX(0);
 }
 .menu-toggle:hover .hamburger span:after{
-  transform:translateX(200%);
+transform:translateX(200%);
 }
 .menu-toggle.active .hamburger span:before{
-  transform:translateX(100%);
+transform:translateX(100%);
 }
 .menu-toggle.active .hamburger span:after{
-  transform:translateX(200%);
+transform:translateX(200%);
 }
 .cross span{
-  display:block;
-  width:18px;
-  height:2px;
-  background-color: black;
-  transform:translateY(50%) rotate(45deg) scaleX(0);
-  transition:transform ease 200ms;
+display:block;
+width:18px;
+height:2px;
+background-color: black;
+transform:translateY(50%) rotate(45deg) scaleX(0);
+transition:transform ease 200ms;
 }
 .cross span:last-child{
-  transform:translateY(-50%) rotate(-45deg) scaleX(0);
+transform:translateY(-50%) rotate(-45deg) scaleX(0);
 }
 .menu-toggle.active .cross span{
-  transition-delay:450ms;
-  transform:translateY(50%) rotate(45deg) scaleX(1);
+transition-delay:450ms;
+transform:translateY(50%) rotate(45deg) scaleX(1);
 }
 .menu-toggle.active .cross span:last-child{
-  transform:translateY(-50%) rotate(-45deg) scaleX(1);
+transform:translateY(-50%) rotate(-45deg) scaleX(1);
 }
 
 
@@ -341,33 +342,33 @@ hr {
 
 @media only screen and (max-width: 1700px){
 
-  img{
-    position: absolute;
-    right: -5%;
+img{
+  position: absolute;
+  right: -5%;
 
-    max-width: 50vw;
-  }
+  max-width: 50vw;
+}
 
-  #Text{
-    margin-top: 30vh;
-    margin-left: 25vw;
-    color: white;
+#Text{
+  margin-top: 30vh;
+  margin-left: 25vw;
+  color: white;
 
-        }
+      }
 
 
-        .main{
+      .main{
 
-          background-size: 140%;
-          height: 1100px;
-        }
+        background-size: 140%;
+        height: 1100px;
+      }
 
-        .number1{
-          position: absolute;
-          left: 50%;
-          top: 900px;
+      .number1{
+        position: absolute;
+        left: 50%;
+        top: 900px;
 
-        }
+      }
 
 
 }
@@ -376,20 +377,20 @@ hr {
 
 @media only screen and (max-width: 1400px){
 
-  img{
-    position: absolute;
-    right: -2%;
+img{
+  position: absolute;
+  right: -2%;
+margin-top: 100px;
+  max-width: 50vw;
+}
 
-    max-width: 40vw;
-  }
 
+#Text{
 
-  #Text{
-    margin-top: 30vh;
-    margin-left: 20vw;
-    color: white;
-    font-size: 0.9rem;
-        }
+  margin-left: 10vw;
+  color: white;
+  font-size: 0.9rem;
+      }
 
 
 }
@@ -397,8 +398,24 @@ hr {
 
 @media only screen and (max-width: 1200px){
 .main{
-  background-size: 160%;
+background-size: 160%;
 }
+
+
+
+h1{
+
+font-size: 3rem;
+
+
+}
+
+
+h2{
+
+font-size: 2rem;
+}
+
 
 }
 
@@ -406,47 +423,47 @@ hr {
 
 
 img{
-  max-width: 700px;
-  position: absolute;
-  right: -4%;
-  top: 200px;;
+max-width: 700px;
+position: absolute;
+right: -4%;
+top: 200px;;
 }
 
 
 #Text{
-    margin-top: 280px;
-    margin-left: 40px;
-    color: white;
-    font-size: 0.9rem;
-        }
+
+  margin-left: 40px;
+  color: white;
+  font-size: 0.9rem;
+      }
 
 
 
 
 
 #nav {
-          margin-top: -50px;
+        margin-top: -50px;
 }
 
 
 #nav a{
 
-            margin-left: 50px;
-            margin-right: 50px;
+          margin-left: 50px;
+          margin-right: 50px;
 
-          }
+        }
 
 
 .year{
-  opacity: 0;
+opacity: 0;
 }
 
 
 .number1{
-  position: absolute;
-  left: 50%;
-  top: 700px;
-  font-size: 4rem;
+position: absolute;
+left: 50%;
+top: 700px;
+font-size: 4rem;
 
 }
 
@@ -461,47 +478,47 @@ img{
 @media only screen and (max-width: 1130px){
 
 
- h1{
-   font-size: 3rem;
+h1{
+ font-size: 3rem;
 
- }
+}
 
 h2{
-  font-size: 1.5rem;
+font-size: 1.5rem;
 
 }
 
 p{
-  font-size: 0.7rem;
-  max-width: 300px;
+font-size: 0.7rem;
+max-width: 300px;
 }
 
 
 img {
-  max-width: 600px;
+max-width: 600px;
 }
 
 
 .main{
-  background-size: 180%;
-  background-position: -500px 0px;
+background-size: 180%;
+background-position: -500px 0px;
 }
 
 }
 
 @media only screen and (max-width: 930px){
 
-  img{
+img{
 
-    position: absolute;
-    right: -14%;
-    top: 200px;;
-  }
+  position: absolute;
+  right: -14%;
+  top: 200px;;
+}
 
-  .main{
-    background-size: 1700px;
+.main{
+  background-size: 1700px;
 
-  }
+}
 
 }
 
@@ -510,20 +527,20 @@ img {
 
 
 
-  img{
+img{
 max-width: 100%;
 
 position: absolute;
 right: 0;
 top: 250px;
-  }
+}
 
-  #Text{
-    margin-top: 880px;
-    margin-left: 40px;
-    color: white;
-    font-size: 0.9rem;
-        }
+#Text{
+  margin-top: 880px;
+  margin-left: 40px;
+  color: white;
+  font-size: 0.9rem;
+      }
 
 
 
@@ -536,10 +553,10 @@ top: 250px;
 @media only screen and (max-width: 700px){
 
 
-  #Text{
-    margin-top: 780px;
+#Text{
+  margin-top: 780px;
 
-        }
+      }
 
 
 }
@@ -549,18 +566,26 @@ top: 250px;
 @media only screen and (max-width: 620px){
 
 
-  #Text{
-    margin-top: 680px;
+img{
+position: absolute;
+right: 0;
+top: 90px;
 
-        }
 
-        .number1{
-          position: absolute;
-          left: 80%;
-          top: 700px;
-          font-size: 2rem;
+}
 
-        }
+#Text{
+  margin-top: 680px;
+
+      }
+
+      .number1{
+        position: absolute;
+        left: 80%;
+        top: 700px;
+        font-size: 2rem;
+
+      }
 
 }
 
@@ -580,16 +605,16 @@ top: 250px;
 @media only screen and (max-width: 570px){
 
 img {
-  max-width: 120%;
+max-width: 120%;
 }
 
 
 #nav{display: none;}
 .number1{
-  position: absolute;
-  left: 80%;
-  top: 400px;
-  font-size: 2rem;
+position: absolute;
+left: 80%;
+top: 400px;
+font-size: 2rem;
 
 }
 
@@ -602,15 +627,15 @@ img {
 
 @media only screen and (max-width: 500px){
 
-  #Text{
-    margin-top: 580px;
+#Text{
+  margin-top: 620px;
 }
 
 img {
-  max-width: 140%;
-  position: absolute;
-  right: 0;
-  top: 150px;
+max-width: 140%;
+position: absolute;
+right: 0;
+top: 150px;
 }
 
 }
@@ -620,9 +645,6 @@ img {
 @media only screen and (max-width: 450px){
 
 
-  #Text{
-    margin-top: 500px;
-  }
 
 }
 
@@ -630,28 +652,41 @@ img {
 
 @media only screen and (max-width: 400px){
 
-  #Text{
-    margin-top: 450px;
-    margin-left: 10px;
+#Text{
+  margin-top: 570px;
+  margin-left: 10px;
 
-
-        }
-
-      h1{
-        font-size: 1.5rem;
 
       }
 
-      h2{
-        font-size: 1rem;
-      }
+    h1{
+      font-size: 1.5rem;
 
-      p{
-        max-width: 90%;
-      }
+    }
+
+    h2{
+      font-size: 1rem;
+    }
+
+    p{
+      max-width: 90%;
+    }
 
 }
 
+
+
+
+@media only screen and (max-width: 380px){
+
+#Text{
+  margin-top: 540px;
+  margin-left: 10px;
+
+
+      }
+
+}
 
 
 
