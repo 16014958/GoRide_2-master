@@ -12,8 +12,9 @@
 
   <div id="links">
     {% for trail in ride %}
-    <a style="background-image:url( static/Images/Alpine.jpg )" href="/jump/result"> {{ trail[0] }} </a>
+    <a style="background-image:url( static/Images/Alpine.jpg )" href="/{{ trail[0] }}/result"> {{ trail[0] }} </a>
     {% endfor %}
+
   </div>
 
 

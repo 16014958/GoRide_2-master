@@ -13,7 +13,7 @@
   <div id="links">
     {% for trail in trails %}
 
-    <a class="{{ trail[0] | upper | replace('A','zzzz')  }} " href="/location"> {{ trail[0] }} </a>
+    <a class="{{ trail[0] | upper | replace('A','zzzz')  }} " href="{{ trail[0] }}/location"> {{ trail[0] }} </a>
 
 
 

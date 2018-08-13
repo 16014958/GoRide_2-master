@@ -16,7 +16,10 @@ background-color: lightgrey;
 /* background-image: url("Images/homepage.jpg"); */
 /* background-size: 100%; */
 margin: 0;
+color: white;
 }
+
+
 
 
 
@@ -36,7 +39,7 @@ float: right;
 padding-top: 150px;
 }
 
-#Text{
+.Text{
 margin-top: 30vh;
 margin-left: 10vw;
 color: white;
@@ -349,7 +352,7 @@ img{
   max-width: 50vw;
 }
 
-#Text{
+.Text{
   margin-top: 30vh;
   margin-left: 25vw;
   color: white;
@@ -385,7 +388,7 @@ margin-top: 100px;
 }
 
 
-#Text{
+.Text{
 
   margin-left: 10vw;
   color: white;
@@ -430,7 +433,7 @@ top: 200px;;
 }
 
 
-#Text{
+.Text{
 
   margin-left: 40px;
   color: white;
@@ -535,7 +538,7 @@ right: 0;
 top: 250px;
 }
 
-#Text{
+.Text{
   margin-top: 880px;
   margin-left: 40px;
   color: white;
@@ -553,7 +556,7 @@ top: 250px;
 @media only screen and (max-width: 700px){
 
 
-#Text{
+.Text{
   margin-top: 780px;
 
       }
@@ -574,7 +577,7 @@ top: 90px;
 
 }
 
-#Text{
+.Text{
   margin-top: 680px;
 
       }
@@ -627,7 +630,7 @@ font-size: 2rem;
 
 @media only screen and (max-width: 500px){
 
-#Text{
+.Text{
   margin-top: 620px;
 }
 
@@ -652,7 +655,7 @@ top: 150px;
 
 @media only screen and (max-width: 400px){
 
-#Text{
+.Text{
   margin-top: 570px;
   margin-left: 10px;
 
@@ -679,7 +682,7 @@ top: 150px;
 
 @media only screen and (max-width: 380px){
 
-#Text{
+.Text{
   margin-top: 540px;
   margin-left: 10px;
 
