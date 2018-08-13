@@ -28,22 +28,32 @@ def landing():
   return render_template('landing.html', trails=trails)
 
 
-@app.route('/location')
-def location():
+@app.route('/jumps/location')
+def jump():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT location FROM rides WHERE style="jumps"')
+  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="jumps"')
   for row in cur:
     ride.append(list(row))
 
   return render_template('location.html', ride=ride)
 
 
-@app.route('/singletrack')
+@app.route('/singletrack/location')
 def singletrack():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT location FROM rides WHERE style="singletrack"')
+  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="singletrack"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+@app.route('/technical/location')
+def technical():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="technical"')
   for row in cur:
     ride.append(list(row))
 
@@ -51,15 +61,125 @@ def singletrack():
 
 
 
-@app.route('/jump/result')
+
+@app.route('/Alpine/location')
+def Alpine():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="Alpine"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+
+
+@app.route('/Seaside/location')
+def seaside():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="Seaside"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+
+
+@app.route('/bikepark/location')
+def bikepark():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="bikepark"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/Bay of Plenty/result')
 def jumps():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT * FROM rides WHERE style="jumps" AND location="Otago"')
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Bay of Plenty" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
   return render_template('result.html', ride=ride)
+
+
+@app.route('/Canterbury/result')
+def jumps1():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Canterbury" AND style="jumps"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/Tasman/result')
+def jumps2():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="jumps"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/Otago/result')
+def jumps3():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="jumps"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+@app.route('/Wellington/result')
+def jumps4():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellingotn" AND style="jumps"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+@app.route('/Rotorua/result')
+def jumps5():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="jumps"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
 
 
 
@@ -74,9 +194,6 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/style/bikepark')
-def bikepark():
-  return "bike park!"
 
 
 
