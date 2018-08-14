@@ -32,7 +32,7 @@ def landing():
 def jump():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="jumps"')
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -43,17 +43,45 @@ def jump():
 def singletrack():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="singletrack"')
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="singletrack"')
   for row in cur:
     ride.append(list(row))
 
   return render_template('location.html', ride=ride)
 
+
+
+
 @app.route('/technical/location')
 def technical():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="technical"')
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="technical"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+
+
+@app.route('/Long Rides/location')
+def Longrides():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="Long Rides"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('location.html', ride=ride)
+
+
+
+
+@app.route('/Forests/location')
+def Forests():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="Forests"')
   for row in cur:
     ride.append(list(row))
 
@@ -66,7 +94,7 @@ def technical():
 def Alpine():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="Alpine"')
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="Alpine"')
   for row in cur:
     ride.append(list(row))
 
@@ -78,7 +106,7 @@ def Alpine():
 def seaside():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="Seaside"')
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="Seaside"')
   for row in cur:
     ride.append(list(row))
 
@@ -90,7 +118,7 @@ def seaside():
 def bikepark():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT location FROM rides WHERE style="bikepark"')
+  cur = con.execute('SELECT DISTINCT location, style FROM rides WHERE style="bikepark"')
   for row in cur:
     ride.append(list(row))
 
@@ -100,6 +128,69 @@ def bikepark():
 
 
 
+@app.route('/singletrack/Tasman/result')
+def singleresult():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="singletrack"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+@app.route('/singletrack/Otago/result')
+def singleresultOtago():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="singletrack"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+@app.route('/singletrack/Canterbury/result')
+def singleresultCanterbury():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, style, location, trail FROM rides WHERE location="Canterbury" AND style="singletrack"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/singletrack/Wellingotn/result')
+def singleresultWellington():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellington" AND style="singletrack"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+@app.route('/jumps/Tasman/result')
+def jumpsT():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="jumps"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
 
 
 
@@ -108,8 +199,7 @@ def bikepark():
 
 
 
-
-@app.route('/Bay of Plenty/result')
+@app.route('/jumps/Bay of Plenty/result')
 def jumps():
   ride = []
   con = sqlite3.connect(MENUDB)
@@ -120,7 +210,13 @@ def jumps():
   return render_template('result.html', ride=ride)
 
 
-@app.route('/Canterbury/result')
+
+
+
+
+
+
+@app.route('/jumps/Canterbury/result')
 def jumps1():
   ride = []
   con = sqlite3.connect(MENUDB)
@@ -132,7 +228,11 @@ def jumps1():
 
 
 
-@app.route('/Tasman/result')
+
+
+
+
+@app.route('/jumps/Tasman/result')
 def jumps2():
   ride = []
   con = sqlite3.connect(MENUDB)
@@ -144,7 +244,10 @@ def jumps2():
 
 
 
-@app.route('/Otago/result')
+
+
+
+@app.route('/jumps/Otago/result')
 def jumps3():
   ride = []
   con = sqlite3.connect(MENUDB)
@@ -158,7 +261,9 @@ def jumps3():
 
 
 
-@app.route('/Wellington/result')
+
+
+@app.route('/jumps/Wellington/result')
 def jumps4():
   ride = []
   con = sqlite3.connect(MENUDB)
@@ -168,7 +273,12 @@ def jumps4():
 
   return render_template('result.html', ride=ride)
 
-@app.route('/Rotorua/result')
+
+
+
+
+
+@app.route('/jumps/Rotorua/result')
 def jumps5():
   ride = []
   con = sqlite3.connect(MENUDB)
@@ -177,6 +287,283 @@ def jumps5():
     ride.append(list(row))
 
   return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+
+
+@app.route('/bikepark/Canterbury/result')
+def bikepark1():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Canterbury" AND style="bikepark"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+@app.route('/bikepark/Tasman/result')
+def bikeparkTasman():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="bikepark"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+@app.route('/bikepark/Bay of Plenty/result')
+def bikeparkBOF():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Bay of Plenty" AND style="bikepark"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+@app.route('/bikepark/Otago/result')
+def bikeparkOtago():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="bikepark"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+@app.route('/bikepark/Wellington/result')
+def bikeparkWelly():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellington" AND style="bikepark"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+@app.route('/technical/Wellington/result')
+def technicalWelly():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellington" AND style="technical"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+@app.route('/technical/Tasman/result')
+def technicalTasman():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="technical"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+@app.route('/technical/Rotorua/result')
+def technicalRoto():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="technical"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+@app.route('/Alpine/Tasman/result')
+def AlpineTasman():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Alpine"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+@app.route('/Alpine/Otago/result')
+def AlpineOtago():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="Alpine"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+@app.route('/Seaside/Tasman/result')
+def SeasideTasman():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Seaside"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+
+
+@app.route('/Forests/Tasman/result')
+def ForestsTasman():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Forests"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+@app.route('/Forests/West Coast/result')
+def ForestsWest():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="West Coast" AND style="Forests"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/Forests/Rotorua/result')
+def ForestsRoto():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="Forests"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+@app.route('/Long Rides/Rotorua/result')
+def LongRoto():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="Long Rides"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+@app.route('/Long Rides/West Coast/result')
+def LongWest():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="West Coast" AND style="Long Rides"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+
+
+
+@app.route('/Long Rides/Tasman/result')
+def LongTasman():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Long Rides"')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

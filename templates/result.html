@@ -2,7 +2,7 @@
 
 {% block title %} Go ride results {% endblock %}
 {% block description %} blah blah {% endblock %}
-{% block stylesheet %}{{ url_for('static', filename='Resultstyles.css') }}{% endblock %}
+{% block stylesheet %}{{url_for('static', filename='Resultstyles.css')}}{% endblock %}
 
 
 {% block content %}
@@ -66,32 +66,45 @@
 
 <div id="Text">
 
+
   {% for trail in ride %}
   <h1> {{ trail[1] }} </h1>
   {% endfor %}
 
-{% for trail in ride %}
+
+
+
+  {% for trail in ride %}
   <p>
     {{ trail[0] }}
   </p>
-{% endfor %}
+  {% endfor %}
 
-{% for trail in ride %}
+
+
+
+  {% for trail in ride %}
   <h2> Distance: {{ trail[6] }}</h2>
   {% endfor %}
 
-{% for trail in ride %}
+
+
+
+  {% for trail in ride %}
   <h2> Difficulty: {{ trail[4] }}</h2>
   {% endfor %}
 
 
+
+
+
   {% for trail in ride %}
   <img class="img1" src='{{ trail[5] }}'>
-{% endfor %}
+  {% endfor %}
 
 
 
-  </div>
+</div>
 
 
 

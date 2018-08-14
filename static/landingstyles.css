@@ -11,10 +11,11 @@
 
 }
 
-*{
-  /* border: 0.5px red solid; */
 
-}
+
+
+
+
 
 
 body{
@@ -46,6 +47,22 @@ h1{
   background-color: white;
 
 }
+
+
+
+
+
+.jumps{
+  background-image: url('static/Images/jumps.jpg');
+  background-color: red;
+}
+
+
+
+
+
+
+
 
 #links{
   margin-top: 00px;

@@ -2,9 +2,11 @@
 
 {% block title %} Landing Page {% endblock %}
 {% block description %} blah blah {% endblock %}
-{% block stylesheet %}{{ url_for('static', filename='landingstyles.css') }}{% endblock %}
+{% block stylesheet %}{{url_for('static', filename='landingstyles.css')}}{% endblock %}
 
 {% block content %}
+
+
 <div id="ride-type">
 
   <h1> What type of ride are you feeling ? </h1>
@@ -13,7 +15,7 @@
   <div id="links">
     {% for trail in trails %}
 
-    <a class="{{ trail[0] | upper | replace('A','zzzz')  }} " href="{{ trail[0] }}/location"> {{ trail[0] }} </a>
+    <a class="{{ trails[0] }}" href="{{ trail[0] }}/location"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} </a>
 
 
 
@@ -27,4 +29,7 @@
 
 
 </div>
+
+
+
 {% endblock %}
