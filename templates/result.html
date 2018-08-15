@@ -9,6 +9,8 @@
 
 <div class="main">
 
+<a class="back" href="/landing"> Back </a>
+
   <div id="nav">
 
 
@@ -84,14 +86,14 @@
 
 
   {% for trail in ride %}
-  <h2> Distance: {{ trail[6] }}</h2>
+  <h2> Distance: {{ trail[4] }}</h2>
   {% endfor %}
 
 
 
 
   {% for trail in ride %}
-  <h2> Difficulty: {{ trail[4] }}</h2>
+  <h2> Difficulty: {{ trail[3] }}</h2>
   {% endfor %}
 
 
@@ -99,7 +101,7 @@
 
 
   {% for trail in ride %}
-  <img class="img1" src='{{ trail[5] }}'>
+  <img class="img1" src='{{ trail[2] }}'>
   {% endfor %}
 
 

@@ -132,7 +132,7 @@ def bikepark():
 def singleresult():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="singletrack"')
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance FROM rides WHERE location="Tasman" AND style="singletrack"')
   for row in cur:
     ride.append(list(row))
 
@@ -145,7 +145,7 @@ def singleresult():
 def singleresultOtago():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="singletrack"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Otago" AND style="singletrack"')
   for row in cur:
     ride.append(list(row))
 
@@ -158,7 +158,7 @@ def singleresultOtago():
 def singleresultCanterbury():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, style, location, trail FROM rides WHERE location="Canterbury" AND style="singletrack"')
+  cur = con.execute('SELECT DISTINCT description, style, location, trail, img, difficulty, distance FROM rides WHERE location="Canterbury" AND style="singletrack"')
   for row in cur:
     ride.append(list(row))
 
@@ -170,7 +170,7 @@ def singleresultCanterbury():
 def singleresultWellington():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellington" AND style="singletrack"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Wellington" AND style="singletrack"')
   for row in cur:
     ride.append(list(row))
 
@@ -186,7 +186,7 @@ def singleresultWellington():
 def jumpsT():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -203,7 +203,7 @@ def jumpsT():
 def jumps():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Bay of Plenty" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Bay of Plenty" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -220,7 +220,7 @@ def jumps():
 def jumps1():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Canterbury" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Canterbury" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -236,7 +236,7 @@ def jumps1():
 def jumps2():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -251,7 +251,7 @@ def jumps2():
 def jumps3():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Otago" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -267,7 +267,7 @@ def jumps3():
 def jumps4():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellingotn" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Wellingotn" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -282,7 +282,7 @@ def jumps4():
 def jumps5():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="jumps"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Rotorua" AND style="jumps"')
   for row in cur:
     ride.append(list(row))
 
@@ -300,7 +300,7 @@ def jumps5():
 def bikepark1():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Canterbury" AND style="bikepark"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Canterbury" AND style="bikepark"')
   for row in cur:
     ride.append(list(row))
 
@@ -316,7 +316,7 @@ def bikepark1():
 def bikeparkTasman():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="bikepark"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="bikepark"')
   for row in cur:
     ride.append(list(row))
 
@@ -331,7 +331,7 @@ def bikeparkTasman():
 def bikeparkBOF():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Bay of Plenty" AND style="bikepark"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Bay of Plenty" AND style="bikepark"')
   for row in cur:
     ride.append(list(row))
 
@@ -346,7 +346,7 @@ def bikeparkBOF():
 def bikeparkOtago():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="bikepark"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Otago" AND style="bikepark"')
   for row in cur:
     ride.append(list(row))
 
@@ -362,7 +362,7 @@ def bikeparkOtago():
 def bikeparkWelly():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellington" AND style="bikepark"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Wellington" AND style="bikepark"')
   for row in cur:
     ride.append(list(row))
 
@@ -377,7 +377,7 @@ def bikeparkWelly():
 def technicalWelly():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Wellington" AND style="technical"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Wellington" AND style="technical"')
   for row in cur:
     ride.append(list(row))
 
@@ -392,7 +392,7 @@ def technicalWelly():
 def technicalTasman():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="technical"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="technical"')
   for row in cur:
     ride.append(list(row))
 
@@ -406,7 +406,7 @@ def technicalTasman():
 def technicalRoto():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="technical"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Rotorua" AND style="technical"')
   for row in cur:
     ride.append(list(row))
 
@@ -420,7 +420,7 @@ def technicalRoto():
 def AlpineTasman():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Alpine"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="Alpine"')
   for row in cur:
     ride.append(list(row))
 
@@ -436,7 +436,7 @@ def AlpineTasman():
 def AlpineOtago():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Otago" AND style="Alpine"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Otago" AND style="Alpine"')
   for row in cur:
     ride.append(list(row))
 
@@ -452,7 +452,7 @@ def AlpineOtago():
 def SeasideTasman():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Seaside"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="Seaside"')
   for row in cur:
     ride.append(list(row))
 
@@ -470,7 +470,7 @@ def SeasideTasman():
 def ForestsTasman():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Forests"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="Forests"')
   for row in cur:
     ride.append(list(row))
 
@@ -484,7 +484,7 @@ def ForestsTasman():
 def ForestsWest():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="West Coast" AND style="Forests"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="West Coast" AND style="Forests"')
   for row in cur:
     ride.append(list(row))
 
@@ -496,7 +496,7 @@ def ForestsWest():
 def ForestsRoto():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="Forests"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Rotorua" AND style="Forests"')
   for row in cur:
     ride.append(list(row))
 
@@ -512,7 +512,7 @@ def ForestsRoto():
 def LongRoto():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Rotorua" AND style="Long Rides"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Rotorua" AND style="Long Rides"')
   for row in cur:
     ride.append(list(row))
 
@@ -526,7 +526,7 @@ def LongRoto():
 def LongWest():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="West Coast" AND style="Long Rides"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="West Coast" AND style="Long Rides"')
   for row in cur:
     ride.append(list(row))
 
@@ -545,7 +545,7 @@ def LongWest():
 def LongTasman():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, trail FROM rides WHERE location="Tasman" AND style="Long Rides"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Tasman" AND style="Long Rides"')
   for row in cur:
     ride.append(list(row))
 

@@ -33,6 +33,15 @@ text-decoration: none;
 letter-spacing: 2px;
 } */
 
+.Back{
+  text-decoration: none;
+  padding-top: 50px;
+  padding-left: 50px;
+  color: white;
+  font-family: 'Orkney';
+}
+
+
 #nav {
 
 float: right;
