@@ -158,7 +158,7 @@ def singleresultOtago():
 def singleresultCanterbury():
   ride = []
   con = sqlite3.connect(MENUDB)
-  cur = con.execute('SELECT DISTINCT description, style, location, trail, img, difficulty, distance FROM rides WHERE location="Canterbury" AND style="singletrack"')
+  cur = con.execute('SELECT DISTINCT description, trail, img, difficulty, distance FROM rides WHERE location="Canterbury" AND style="singletrack"')
   for row in cur:
     ride.append(list(row))
 
