@@ -2,7 +2,7 @@
 
 {% block title %} Location Page {% endblock %}
 {% block description %} blah blah {% endblock %}
-{% block stylesheet %}{{ url_for('static', filename='landingstyles.css') }}{% endblock %}
+{% block stylesheet %}{{ url_for('static', filename='location.css') }}{% endblock %}
 
 {% block content %}
 
@@ -26,14 +26,18 @@
   <h1> Where do you want to ride ? </h1>
   <div class="line"></div>
 
+
+{% block link %}
   <div id="links">
     {% for trail in ride %}
-    <a style="background-image:url( "Images/Alpine.jpg" )" href="/{{ trail[1] }}/{{ trail[0] }}/result"> {{ trail[0] }} </a>
+
+    <a  href="/{{ trail[1] }}/{{ trail[0] }}/result"> {{ trail[0] }} </a>
     {% endfor %}
+
 
   </div>
 
-
+  {% endblock %}
 
 
 

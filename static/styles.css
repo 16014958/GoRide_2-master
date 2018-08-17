@@ -63,7 +63,7 @@ p{
   position: relative;
   left: 0px;
   top: 40px;
-  background-color: #50b6c2;;
+  background-color: #50b6c2;
   letter-spacing: 5px;
   word-spacing: 20px;
   font-family: 'OrkneyMedium', sans-serif;
@@ -75,10 +75,32 @@ p{
   padding-top: 15px;
   padding-bottom: 15px;
   opacity: 0.9;
+  margin-left: 20px;
 
 
 
+}
 
+img{
+  margin-left: 20px;
+transition: 0.5s box-shadow;
+transition: all .2s ease-in-out;
+}
+
+img:hover{
+  transform: scale(1.1);
+  -webkit-box-shadow: 2px 2px 2px 2px #2c2421;
+  -moz-box-shadow: 2px 2px 2px 2px #2c2421;
+  box-shadow: 1px 10px 50px 0px #2c2421;
+}
+
+.images
+{
+position: relative;
+left: 900px;
+top: -300px;
+/* background-color: red; */
+width: 500px;
 }
 
 

@@ -93,7 +93,7 @@ letter-spacing: 2px;
   -webkit-text-shadow: 2px 2px 2px 2px rgba(193, 79, 82, 1);
   -moz-text-shadow: 2px 2px 2px 2px rgba(193, 79, 82, 1);
   text-shadow: 1px 10px 50px 0px rgba(193, 79, 82, 1);
-  
+
 }
 
 #leftNav{
@@ -115,7 +115,18 @@ letter-spacing: 2px;
 
 
 .Sub-title{
-display: none;
+  background-color: #de6e38;
+  font-size: 0.9rem;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  top: 100px;
+  left: 70px;
+  border-radius: 5px;
+  font-family: 'sf-light', sans-serif;
+  color: white;
 
 }
 

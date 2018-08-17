@@ -11,8 +11,10 @@
 
  <a class="title" href="/">Go Ride NZ</a>
 
- <a class="Sub-title">Style</a>
 
+{% for trail in trails %}
+ <a class="Sub-title">hello{{ trail }}</a>
+{% endfor %}
 
 {% for trail in trails %}
  <a class="Sub-title-semi" href="{{ trail[0] }}/location"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }}</a>

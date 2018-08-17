@@ -31,6 +31,109 @@ def landing():
   return render_template('landing.html', trails=trails)
 
 
+@app.route('/alllocation')
+def alllocations():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT location FROM rides')
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('alllocation.html', ride=ride)
+
+
+
+@app.route('/Canterbury/result')
+def Cantlocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="Canterbury"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/Tasman/result')
+def Tasmanlocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="Tasman"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+@app.route('/Wellington/result')
+def Wellylocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="Wellington"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+@app.route('/Bay of Plenty/result')
+def Baylocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="Bay of Plenty"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+@app.route('/Rotorua/result')
+def Rotolocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="Rotorua"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/Otago/result')
+def Otagolocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="Otago"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+@app.route('/West Coast/result')
+def Westlocation():
+  ride = []
+  con = sqlite3.connect(MENUDB)
+  cur = con.execute('SELECT DISTINCT description, trail , img, difficulty, distance, style, location FROM rides WHERE location="West Coast"')
+
+  for row in cur:
+    ride.append(list(row))
+
+  return render_template('result.html', ride=ride)
+
+
+
+
+
 @app.route('/jumps/location')
 def jump():
   ride = []
