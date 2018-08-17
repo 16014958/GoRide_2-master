@@ -9,7 +9,7 @@
 
 
 <div class="Info">
-
+<a class="back" href="/"> &lsaquo; Back </a>
 
   <h1> About GoRide </h1>
 
@@ -24,6 +24,19 @@
   </p>
 
 
+
+
+<h2> Just look at what NZ has to offer. </h2>
+
+<div class="line"> </div>
+
+
+{% for trail in ride %}
+
+
+<img class="img3" src="{{ trail[0] }} " width="100%">
+
+{% endfor %}
 
 
 

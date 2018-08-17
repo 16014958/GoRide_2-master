@@ -1,10 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %} Landing Page {% endblock %}
+{% block title %} Location Page {% endblock %}
 {% block description %} blah blah {% endblock %}
 {% block stylesheet %}{{ url_for('static', filename='landingstyles.css') }}{% endblock %}
 
 {% block content %}
+
+
+<div id="leftNav">
+
+ <a class="title" href="/">Go Ride NZ</a>
+
+ {% for trail in trails %}
+  <a class="Sub-title-semi"> {{ trail | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }}</a>
+     {% endfor %}
+
+<a class="Sub-title-location">Location</a>
+
+
+
+</div>
+
 <div id="ride-type">
 
   <h1> Where do you want to ride ? </h1>
@@ -12,7 +28,7 @@
 
   <div id="links">
     {% for trail in ride %}
-    <a style="background-image:url( static/Images/Alpine.jpg )" href="/{{ trail[1] }}/{{ trail[0] }}/result"> {{ trail[0] }} </a>
+    <a style="background-image:url( "Images/Alpine.jpg" )" href="/{{ trail[1] }}/{{ trail[0] }}/result"> {{ trail[0] }} </a>
     {% endfor %}
 
   </div>

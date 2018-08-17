@@ -7,9 +7,23 @@
 
 {% block content %}
 
+<div id="leftNav">
+
+ <a class="title" href="/">Go Ride NZ</a>
+
+ <a class="Sub-title">Style</a>
+
+
+{% for trail in trails %}
+ <a class="Sub-title-semi" href="{{ trail[0] }}/location"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }}</a>
+    {% endfor %}
+
+
+</div>
+
 <div class="main">
 
-<a class="back" href="/landing"> &lsaquo; Back </a>
+<a id="back" href="/landing"> &lsaquo; Back </a>
 
   <div id="nav">
 
@@ -66,45 +80,37 @@
 
 
 
+
 <div id="Text">
 
 
+
+
+  <div class="entry">
   {% for trail in ride %}
-  <h1> {{ trail[1] }} </h1>
+
+
+<img class="img1" src='{{ trail[2] }}' >
+
+    <h1> {{ trail[1] }} </h1>
+
+
+
+    <p>
+      {{ trail[0] }}
+    </p>
+    <h2> Distance: {{ trail[4] }}</h2>
+    <h2> Difficulty: {{ trail[3] }}</h2>
+
+  <h3> {{ trail[5] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }}</h3><h3>{{ trail[6] }}</h3>
+
+
+<div class="space">
+
+</div>
+
   {% endfor %}
-
-
-
-
-  {% for trail in ride %}
-  <p>
-    {{ trail[0] }}
-  </p>
-  {% endfor %}
-
-
-
-
-  {% for trail in ride %}
-  <h2> Distance: {{ trail[4] }}</h2>
-  {% endfor %}
-
-
-
-
-  {% for trail in ride %}
-  <h2> Difficulty: {{ trail[3] }}</h2>
-  {% endfor %}
-
-
-
-
-
-  {% for trail in ride %}
-  <img class="img1" src='{{ trail[2] }}'>
-  {% endfor %}
-
-
+</div>
 
 </div>
 
@@ -126,14 +132,24 @@
 
 
 
-<p class="number1"> 01.</p>
+<!-- <p class="number1"> 01.</p> -->
 
 
 </div>
 
 
 
+<footer>
 
+  <div class="contact">
+
+    goridenz@gmail.co.nz
+
+
+  </div>
+
+
+</footer>
 
 
 
@@ -156,6 +172,10 @@ $(document).ready(function(){
 	});
 });
 </script>
+
+
+
+
 
 
 {% endblock %}

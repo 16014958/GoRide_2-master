@@ -1,21 +1,38 @@
 {% extends "base.html" %}
 
-{% block title %} Landing Page {% endblock %}
+{% block title %} Type of ride {% endblock %}
 {% block description %} blah blah {% endblock %}
 {% block stylesheet %}{{url_for('static', filename='landingstyles.css')}}{% endblock %}
 
 {% block content %}
 
 
+<div id="leftNav">
+
+ <a class="title" href="/">Go Ride NZ</a>
+
+ <a class="Sub-title">Style</a>
+
+
+{% for trail in trails %}
+ <a class="Sub-title-semi" href="{{ trail[0] }}/location"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }}</a>
+    {% endfor %}
+
+
+</div>
+
+
 <div id="ride-type">
 
+  <!-- <a id="back" href="/"> &lsaquo; Home </a> -->
+  <a class="all" href="/all/result"> All Trails &#8897; </a>
   <h1> What type of ride are you feeling ? </h1>
   <div class="line"></div>
 
   <div id="links">
     {% for trail in trails %}
 
-    <a class="{{ trails[0] }}" href="{{ trail[0] }}/location"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} </a>
+    <a class="" href="{{ trail[0] }}/location">  {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} <img class="img2" src='{{ trail[1] }}' width="200px"  > </a>
 
 
 
