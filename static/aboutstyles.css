@@ -23,6 +23,14 @@
 
 }
 
+@font-face {
+  font-family: 'SF-Pro-Display-Bold';
+  src: url(SF-Pro-Display-Bold.otf);
+
+}
+
+
+
 
 
 .back{
@@ -85,7 +93,7 @@ margin-top: 200px;
 
 h1 {
   padding-left: 20px;
-  font-family: 'sf-light';  font-size: 3.2rem;
+    font-family: 'SF-Pro-Display-Bold';  font-size: 3.2rem;
   opacity: 0.8;
   margin-top: 80px;
 
@@ -95,7 +103,7 @@ h1 {
 
   border-top: 2px white solid;
   padding-top: 20px;
-  font-family: 'sf-light';  max-width: 500px;
+    font-family: 'SF-Pro-Display-Bold';  max-width: 500px;
   opacity: 0.8;
   margin-left: 20px;
   font-size: 1.1rem;
@@ -108,7 +116,8 @@ h1 {
   margin-right: auto;
   text-align: center;
   padding-left: 20px;
-  font-family: 'sf-light';  max-width: 800px;
+  letter-spacing: 1px;
+    font-family: 'SF-Pro-Display-Bold';  max-width: 800px;
   opacity: 0.8;
   padding-top: 150px;
 }

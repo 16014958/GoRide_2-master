@@ -2,21 +2,29 @@
 
 {% block title %} All Location Page {% endblock %}
 {% block description %} blah blah {% endblock %}
-{% block stylesheet %}{{ url_for('static', filename='location.css') }}{% endblock %}
+{% block stylesheet %}{{ url_for('static', filename='location.css')}}{% endblock %}
 
 
 
 
 
 {% block link %}
-  <div id="links">
-    {% for trail in ride %}
-
-    <a  href="/{{ trail[0] }}/result"> {{ trail[0] }} </a>
-  {% endfor %}
 
 
-  </div>
 
+<div class="hel">
+
+<ul >
+  {% for trail in ride %}
+
+  <li><a href="/{{ trail[0] }}/result"><img class="img1" ><p class="titletext">{{ trail[0] }}</p></a></li>
+
+
+
+
+
+{% endfor %}
+</ul>
+</div>
 
 {% endblock %}

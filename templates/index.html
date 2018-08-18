@@ -18,7 +18,7 @@
 
 
 
-
+<!--
   <div id="nav">
 
 
@@ -26,25 +26,25 @@
 
 
     <ul>
-        <li class="one"><a href="/landing">Trails</a></li><!--
-     --><li class="two"><a href="/about">About</a></li><!--
-     --><li class="three"><a href="/contact">Contact</a></li>
-      <!-- <li class="four"><a href="#">Quatro</a></li>  -->
+        <li class="one"><a href="/landing">Trails</a></li>
+     <li class="two"><a href="/about">About</a></li>
+     <li class="three"><a href="/contact">Contact</a></li>
+
       <div class="hr"></div>
 
-        <!-- <hr> <hr /> -->
+
       </ul>
 
 
 
-  </div>
+  </div> -->
 
 
-  <div class="mobile-menu">
+  <!-- <div class="mobile-menu">
 
-    <!-- <a class="dropdown-link">hello</a> -->
+   <a class="dropdown-link">hello</a> -->
 
-    <div class="menu-toggle">
+    <!-- <div class="menu-toggle">
   <div class="hamburger">
   <span></span>
   <span></span>
@@ -63,12 +63,20 @@
   <li><span><a href="/contact">Contact</a></span></li>
 
   </ul>
-  </div>
+  </div> -->
 
 
 
 
-<p class="year"> 2 0 1 8 </p>
+<!-- <p class="year"> 2 0 1 8 </p> -->
+
+
+  <div class="se-pre-con">
+
+
+   Loading
+
+</div>
 
 
 
@@ -76,19 +84,16 @@
 
   <h1> Go Ride NZ </h1>
   <p>
-    Find some of New Zealand's best trails, not by name but by what you want to ride. Whether its jumps, alpine or seaside. GoRide
-    can find the perfect trail for you.
+    Find some of New Zealand's best trails, not by name but by what you want to ride.
   </p>
 
-  <a class="explore" href="/landing">Trails </a>
-  <a class="explore" href="/alllocation">All locations </a>
+  <a class="explore" href="/landing">BROWSE  TRAILS</a>
+  <a class="explore" href="/alllocation">ALL  LOCATIONS</a>
 
 
 </div>
 
-<div class="images">
-<a href="/Otago/result"><img  src="static/Images/EO.png" width="220px"></a> <a href="/Rotorua/result">  <img src="static/Images/RB.png" width="220px"></a>
-</div>
+
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
@@ -109,6 +114,29 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
 
+
+
+$(window).load(function ()  {
+
+setTimeout(function(){ $(".se-pre-con").fadeOut("slow");}, 2000);
+
+
+
+
+
+ // $(".se-pre-con").css({
+ //   'height': '100px';
+ //   'background-color': 'red';
+ // });
+
+
+
+});
+
+
+
+</script>
 
 {% endblock %}

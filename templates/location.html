@@ -6,7 +6,7 @@
 
 {% block content %}
 
-
+<!--
 <div id="leftNav">
 
  <a class="title" href="/">Go Ride NZ</a>
@@ -27,7 +27,7 @@
   <div class="line"></div>
 
 
-{% block link %}
+
   <div id="links">
     {% for trail in ride %}
 
@@ -37,7 +37,176 @@
 
   </div>
 
-  {% endblock %}
+
+
+
+
+  <br />
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="leftNav">
+
+ <a class="title" href="/landing">Go Ride NZ</a>
+
+ <!-- <a class="Sub-title">Style</a> -->
+
+
+
+ <a class="Sub-title-semi" href="/all/result"> All trails </a>
+
+ {% for trail in ride %}
+
+  <a class="Sub-title-semi" href="/{{ trail[1] }}/location"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} </a>
+
+ {% endfor %}
+   <a class="Sub-title-semi" href="/contact"> Contact </a>
+
+
+</div>
+
+
+<div id="ride-type">
+
+  <!-- <a id="back" href="/"> &lsaquo; Home </a> -->
+  <!-- <a class="all" href="/all/result"> All Trails &#8897; </a> -->
+
+  <h1> Locations </h1>
+
+
+<div class="navlinks">
+  <a class="Browselinks" href="/landing">OVERVIEW</a>
+  <a class="Browselinks" href="/landing">STYLE</a>
+  <a class="Browselinksl" href="">LOCATION</a>
+
+</div>
+
+<div class="imagehead">
+
+Discover Queenstown's A-line.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="line"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  class="title1">
+<p> Location of rides </p>
+
+</div>
+
+
+<div class="line2"></div>
+
+
+{% block link %}
+
+<div class="hel">
+
+<ul >
+  {% for trail in ride %}
+
+  <li><a href="/{{ trail[1] }}/{{ trail[0] }}/result"><img class="img1" ><p class="titletext">{{ trail[0] }}</p></a></li>
+
+
+
+
+
+{% endfor %}
+</ul>
+</div>
+
+{% endblock %}
+
+
+
+
+<!-- <div class="sortEntry">
+{% for trail in trails %}
+
+
+    <a class="entry">
+
+      <ul>
+
+    <li><a><img class="img1" src='{{ trail[1] }}' ></a></li>
+
+    <li> <a> <h1> {{ trail[0] }} </h1></a></li>
+
+
+</ul>
+
+
+    {% endfor %}
+    </a>
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!--
+  <div id="links">
+    {% for trail in trails %}
+
+    <a class="" href="{{ trail[0] }}/location">  {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} <img class="img2" src='{{ trail[1] }}' width="200px"  >   </a>
+
+
+
+    {% endfor %}
+  </div> -->
+
 
 
 
@@ -45,4 +214,47 @@
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(function() {
+  // Smooth Scrolling
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
 {% endblock %}

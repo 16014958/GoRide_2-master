@@ -1,12 +1,172 @@
-{% extends "base.html" %}
+{% extends "landing.html" %}
 
 {% block title %} Go ride results {% endblock %}
 {% block description %} blah blah {% endblock %}
-{% block stylesheet %}{{url_for('static', filename='Resultstyles.css')}}{% endblock %}
+{% block stylesheet %}{{url_for('static', filename='location.css')}}{% endblock %}
 
 
 {% block content %}
 
+
+
+
+<div id="leftNav">
+
+ <a class="title" href="/landing">Go Ride NZ</a>
+
+ <!-- <a class="Sub-title">Style</a> -->
+
+
+<a class="Sub-title-semi" href="/landing"> Home </a>
+ <a class="Sub-title-semi" href="/all/result"> All trails </a>
+
+ {% for trail in trails %}
+
+  <a class="Sub-title-semi" href="/{{ trail[0] }}/result"> {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} </a>
+
+ {% endfor %}
+   <a class="Sub-title-semi" href="/contact"> Contact </a>
+
+
+
+</div>
+
+
+<div id="ride-type">
+
+  <!-- <a id="back" href="/"> &lsaquo; Home </a> -->
+  <!-- <a class="all" href="/all/result"> All Trails &#8897; </a> -->
+
+
+
+
+  <h1>Trails </h1>
+
+
+
+
+
+
+<div class="navlinks">
+  <a class="Browselinks" href="/landing">OVERVIEW</a>
+  <a class="Browselinks" href="/landing">STYLE</a>
+  <a class="Browselinksl" href="">LOCATION</a>
+
+</div>
+
+<div class="imagehead2">
+
+Find some of the best trails in Otago.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="line"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  class="title1">
+<p> Rides </p>
+
+</div>
+
+
+<div class="line2"></div>
+
+<div class="hel">
+
+<ul >
+
+</ul>
+</div>
+
+
+
+
+
+
+<!-- <div class="sortEntry">
+{% for trail in trails %}
+
+
+    <a class="entry">
+
+      <ul>
+
+    <li><a><img class="img1" src='{{ trail[1] }}' ></a></li>
+
+    <li> <a> <h1> {{ trail[0] }} </h1></a></li>
+
+
+</ul>
+
+
+    {% endfor %}
+    </a>
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!--
+  <div id="links">
+    {% for trail in trails %}
+
+    <a class="" href="{{ trail[0] }}/location">  {{ trail[0] | replace('jumps', 'Jumps') | replace('Seaside', 'Sea Side') | replace('bikepark', 'Bike Parks') | replace('singletrack', 'Single Tracks') | replace('technical', 'Technical') }} <img class="img2" src='{{ trail[1] }}' width="200px"  >   </a>
+
+
+
+    {% endfor %}
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div id="leftNav">
 
  <a class="title" href="/">Go Ride NZ</a>
@@ -33,14 +193,9 @@
 
 
 
-    <ul>
-        <li class="one"><a href="/landing">Trails</a></li><!--
-     --><li class="two"><a href="/">Home</a></li><!--
-     --><li class="three"><a href="/contact">Contact</a></li>
-      <!-- <li class="four"><a href="#">Quatro</a></li>  -->
 
 
-    </hr>
+    <! </hr>
       </ul>
 
 
@@ -49,7 +204,6 @@
 
   <div class="mobile-menu">
 
-    <!-- <a class="dropdown-link">hello</a> -->
 
     <div class="menu-toggle">
   <div class="hamburger">
@@ -77,13 +231,13 @@
 
 
 <p class="year"> 2 0 1 8 </p>
+ -->
 
 
 
 
 
-
-<div id="Text">
+ <div id="Text">
 
 
 
@@ -92,7 +246,7 @@
   {% for trail in ride %}
 
 
-<img class="img1" src='{{ trail[2] }}' >
+ <img class="img5" src='{{ trail[2] }}' >
 
     <h1> {{ trail[1] }} </h1>
 
@@ -129,15 +283,19 @@
 
 
 
-</div>
 
 
 
 
-<!-- <p class="number1"> 01.</p> -->
 
 
-</div>
+
+
+
+
+
+
+
 
 
 
